@@ -4,10 +4,14 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ToDoComponent } from './todo/to-do.component';
+import { HomeComponent } from './home/home.component';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    ToDoComponent
+    HomeComponent,
+    ToDoComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -15,6 +19,6 @@ import { ToDoComponent } from './todo/to-do.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [ToDoComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
