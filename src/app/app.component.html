@@ -4,15 +4,13 @@
     <input class="new-todo" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addToDo()">
   </header>
   <section class="main" *ngIf="toDos.length > 0">
-    <ul class="todo-list">
-      <li *ngFor="let todo of toDos" [class.completed]="todo.complete">
-        <div class="view">
-          <input class="toggle" type="checkbox" (click)="toggleToDoComplete(todo)" [checked]="todo.complete">
-          <label>{{todo.title}}</label>
-          <button class="destroy" (click)="removeToDo(todo)"></button>
-        </div>
-      </li>
-    </ul>
+    <div *ngFor="let todo of toDos" [class.completed]="todo.complete" class="todo-list">
+      <div class="view">
+        <input class="toggle" type="checkbox" (click)="toggleToDoComplete(todo)" [checked]="todo.complete">
+        <label>{{todo.title}}</label>
+        <button class="destroy" (click)="removeToDo(todo)">X</button>
+      </div>
+    </div>
   </section>
   <footer class="footer" *ngIf="toDos.length > 0">
     <span class="todo-count"><strong>{{toDos.length}}</strong> {{toDos.length == 1 ? 'item' : 'items'}} left</span>

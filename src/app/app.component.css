@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
+
+.todoapp {
+    font-family: 'Hind', sans-serif;
+    width: 450px;
+    margin: 0 auto;
+}
+
+.new-todo {
+    padding: 8px;
+    width: 400px;
+}
+
+.todo-list {
+    padding: 8px 0;
+    width: 100%;
+}
+
+.todo-list input {
+    margin-right: 8px;
+}
+
+button {
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.destroy {
+    background: red;
+    color: white;
+    float: right;
+}
