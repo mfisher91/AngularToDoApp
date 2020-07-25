@@ -9,6 +9,7 @@
         <input class="toggle" type="checkbox" (click)="toggleToDoComplete(todo)" [checked]="todo.complete">
         <label>{{todo.title}}</label>
         <button class="destroy" (click)="removeToDo(todo)">X</button>
+        <span class="todo-date">{{todo.dateCreated}}</span>
       </div>
     </div>
   </section>

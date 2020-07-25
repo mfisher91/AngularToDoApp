@@ -16,8 +16,21 @@
     width: 100%;
 }
 
-.todo-list input {
+.view {
+    position: relative;
+    min-height: 52px;
+    border-bottom: 1px solid grey;
+}
+
+.view input {
     margin-right: 8px;
+}
+
+.todo-date {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    font-size: 12px;
 }
 
 button {

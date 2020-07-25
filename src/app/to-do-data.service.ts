@@ -13,6 +13,7 @@ export class ToDoDataService {
   // Simulate POST /todos
   addToDo(todo: ToDo): ToDoDataService {
     if(!todo.id) todo.id = ++this.lastId;
+    todo.dateCreated = new Date();
     this.todos.push(todo);
     return this;
   }
