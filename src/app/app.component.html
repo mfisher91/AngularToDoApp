@@ -13,6 +13,6 @@
     </div>
   </section>
   <footer class="footer" *ngIf="toDos.length > 0">
-    <span class="todo-count"><strong>{{toDos.length}}</strong> {{toDos.length == 1 ? 'item' : 'items'}} left</span>
+    <span class="todo-count"><strong>{{remainingToDoCount}}</strong> {{toDos.length == 1 ? 'item' : 'items'}} left</span>
   </footer>
 </section>

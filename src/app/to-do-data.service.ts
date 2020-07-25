@@ -49,4 +49,9 @@ export class ToDoDataService {
 
     return updatedToDo;
   }
+
+  // Get number of remaining todos 
+  getRemainingToDoCount() {
+    return this.todos.filter(todo => !todo.complete).length;
+  }
 }

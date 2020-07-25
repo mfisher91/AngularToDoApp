@@ -38,4 +38,8 @@ export class AppComponent {
   get toDos() {
     return this.todoDataService.getAllTodos();
   }
+
+  get remainingToDoCount() {
+    return this.todoDataService.getRemainingToDoCount();
+  }
 }
