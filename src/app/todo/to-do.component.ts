@@ -4,11 +4,11 @@ import { ToDo } from './to-do';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  templateUrl: './to-do.html',
+  styleUrls: ['./to-do.component.css'],
   providers: [ToDoDataService]
 })
-export class AppComponent {
+export class ToDoComponent {
   newTodo: ToDo = new ToDo();
   display: string = 'all';
   order: string = 'date desc';
