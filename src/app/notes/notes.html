@@ -1,0 +1,16 @@
+<section class="notes-container">
+    <header class="header">
+        <h1>Notes</h1>
+        <input class="text-input" placeholder="Enter a note" autofocus="" [(ngModel)]="newNote.text" (keyup.enter)="addNote()" />
+    </header>
+    <section class="main" *ngIf="notes.length > 0">
+        <div *ngFor="let note of notes" class="note-list">
+            <div class="view">
+                <p>{{note.text}}</p>
+                <button class="destroy" (click)="removeNote(note)">X</button>
+                <span class="date">{{note.dateCreated}}</span>
+            </div>
+        </div>
+    </section>
+    <a href="/">Back</a>
+</section>

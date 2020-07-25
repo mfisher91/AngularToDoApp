@@ -1,2 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
+
+.view {
+    position: relative;
+    min-height: 52px;
+    border-bottom: 1px solid grey;
+}
+
+.date {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    font-size: 12px;
+}
+
+button {
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.destroy {
+    background: red;
+    color: white;
+    float: right;
+}
+
+.text-input {
+    padding: 8px;
+    width: 400px;
+}

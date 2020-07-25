@@ -4,47 +4,13 @@
     margin: 0 auto;
 }
 
-.new-todo {
-    padding: 8px;
-    width: 400px;
-}
-
 .todo-list {
     padding: 8px 0;
     width: 100%;
 }
 
-.view {
-    position: relative;
-    min-height: 52px;
-    border-bottom: 1px solid grey;
-}
-
 .view input {
     margin-right: 8px;
-}
-
-.todo-date {
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    font-size: 12px;
-}
-
-button {
-    border: none;
-    padding: 8px;
-    border-radius: 5px;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-.destroy {
-    background: red;
-    color: white;
-    float: right;
 }
 
 .options {

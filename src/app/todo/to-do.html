@@ -1,7 +1,7 @@
 <section class="todoapp">
   <header class="header">
     <h1>To Dos</h1>
-    <input class="new-todo" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addToDo()">
+    <input class="text-input" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addToDo()">
   </header>
   <div class="options">
     <button class="with-border" [class.selected]="display === 'all'" (click)="showAll()">All</button>
@@ -20,7 +20,7 @@
         <input class="toggle" type="checkbox" (click)="toggleToDoComplete(todo)" [checked]="todo.complete">
         <label>{{todo.title}}</label>
         <button class="destroy" (click)="removeToDo(todo)">X</button>
-        <span class="todo-date">{{todo.dateCreated}}</span>
+        <span class="date">{{todo.dateCreated}}</span>
       </div>
     </div>
   </section>
@@ -30,7 +30,7 @@
         <input class="toggle" type="checkbox" (click)="toggleToDoComplete(todo)" [checked]="todo.complete">
         <label>{{todo.title}}</label>
         <button class="destroy" (click)="removeToDo(todo)">X</button>
-        <span class="todo-date">{{todo.dateCreated}}</span>
+        <span class="date">{{todo.dateCreated}}</span>
       </div>
     </div>
   </section>
@@ -40,11 +40,12 @@
         <input class="toggle" type="checkbox" (click)="toggleToDoComplete(todo)" [checked]="todo.complete">
         <label>{{todo.title}}</label>
         <button class="destroy" (click)="removeToDo(todo)">X</button>
-        <span class="todo-date">{{todo.dateCreated}}</span>
+        <span class="date">{{todo.dateCreated}}</span>
       </div>
     </div>
   </section>
   <footer class="footer" *ngIf="toDos.length > 0">
     <span class="todo-count"><strong>{{remainingToDoCount}}</strong> {{toDos.length == 1 ? 'item' : 'items'}} left</span>
   </footer>
+  <a href="/">Back</a>
 </section>
