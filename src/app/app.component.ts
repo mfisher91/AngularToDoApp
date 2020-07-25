@@ -10,6 +10,7 @@ import { ToDo } from './to-do';
 })
 export class AppComponent {
   newTodo: ToDo = new ToDo();
+  display: string = 'incomplete';
 
   // Ask Angular DI system to inject the dependency
   // associated with the dependency injection token `TodoDataService`
@@ -25,6 +26,7 @@ export class AppComponent {
   addToDo() {
     this.todoDataService.addToDo(this.newTodo);
     this.newTodo = new ToDo();
+    this.showIncompleteToDos();
   }
 
   toggleToDoComplete(todo) {
@@ -41,5 +43,13 @@ export class AppComponent {
 
   get remainingToDoCount() {
     return this.todoDataService.getRemainingToDoCount();
+  }
+
+  showCompleteToDos() {
+    this.display = "complete";
+  }
+
+  showIncompleteToDos() {
+    this.display = "incomplete";
   }
 }

@@ -3,9 +3,23 @@
     <h1>To Dos</h1>
     <input class="new-todo" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addToDo()">
   </header>
-  <section class="main" *ngIf="toDos.length > 0">
+  <div class="nav-buttons">
+    <button class="with-border" [class.selected]="display === 'incomplete'" (click)="showIncompleteToDos()">Incomplete</button>
+    <button [class.selected]="display === 'complete'" (click)="showCompleteToDos()">Complete</button>
+  </div>
+  <section class="main" *ngIf="toDos.length > 0 && display === 'incomplete'">
     <div *ngFor="let todo of toDos" [class.completed]="todo.complete" class="todo-list">
-      <div class="view">
+      <div *ngIf="!todo.complete" class="view">
+        <input class="toggle" type="checkbox" (click)="toggleToDoComplete(todo)" [checked]="todo.complete">
+        <label>{{todo.title}}</label>
+        <button class="destroy" (click)="removeToDo(todo)">X</button>
+        <span class="todo-date">{{todo.dateCreated}}</span>
+      </div>
+    </div>
+  </section>
+  <section class="main" *ngIf="toDos.length > 0 && display === 'complete'">
+    <div *ngFor="let todo of toDos" [class.completed]="todo.complete" class="todo-list">
+      <div *ngIf="todo.complete" class="view">
         <input class="toggle" type="checkbox" (click)="toggleToDoComplete(todo)" [checked]="todo.complete">
         <label>{{todo.title}}</label>
         <button class="destroy" (click)="removeToDo(todo)">X</button>

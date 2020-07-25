@@ -48,3 +48,21 @@ button:hover {
     color: white;
     float: right;
 }
+
+.nav-buttons {
+    margin: 8px 0;
+}
+
+.nav-buttons button {
+    background: none;
+    font-size: 16px;
+    border-radius: 0;
+}
+
+.nav-buttons .selected {
+    font-weight: bold;
+}
+
+.nav-buttons .with-border {
+    border-right: 1px solid grey;
+}
