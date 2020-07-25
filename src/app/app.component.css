@@ -49,20 +49,25 @@ button:hover {
     float: right;
 }
 
-.nav-buttons {
+.options {
     margin: 8px 0;
 }
 
-.nav-buttons button {
+.options button {
     background: none;
     font-size: 16px;
     border-radius: 0;
 }
 
-.nav-buttons .selected {
+.options .selected {
     font-weight: bold;
 }
 
-.nav-buttons .with-border {
+.options .with-border {
     border-right: 1px solid grey;
+}
+
+.options select {
+    float: right;
+    padding: 8px;
 }

@@ -33,8 +33,34 @@ export class ToDoDataService {
   }
 
   // Simulate GET /todos
-  getAllTodos(): ToDo[] {
-    return this.todos;
+  getAllTodos(order: string): ToDo[] {
+    let orderedTodos = null;
+
+    // Order the todos
+    switch(order) {
+      case "date desc":
+        orderedTodos = this.todos.sort((a, b) => new Date(b.dateCreated).getTime() - new Date(a.dateCreated).getTime());
+        break;
+      case "date asc":
+        orderedTodos = this.todos.sort((a, b) => new Date(a.dateCreated).getTime() - new Date(b.dateCreated).getTime());
+        break;
+      case "title desc": 
+        orderedTodos = this.todos.sort((a, b) => {
+          if(a.title < b.title) return 1;
+          if(a.title > b.title) return -1;
+          return 0;
+        });
+        break;
+      case "title asc":
+        orderedTodos = this.todos.sort((a, b) => {
+          if(a.title < b.title) return -1;
+          if(a.title > b.title) return 1;
+          return 0;
+        });
+        break;
+    }
+
+    return orderedTodos;
   }
 
   // Simulate GET /todos/:id

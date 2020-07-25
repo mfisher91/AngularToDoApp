@@ -11,6 +11,7 @@ import { ToDo } from './to-do';
 export class AppComponent {
   newTodo: ToDo = new ToDo();
   display: string = 'all';
+  order: string = 'date desc';
 
   // Ask Angular DI system to inject the dependency
   // associated with the dependency injection token `TodoDataService`
@@ -38,7 +39,7 @@ export class AppComponent {
   }
 
   get toDos() {
-    return this.todoDataService.getAllTodos();
+    return this.todoDataService.getAllTodos(this.order);
   }
 
   get remainingToDoCount() {
